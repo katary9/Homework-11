@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #061b33;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+   align-items: center;
+   max-width: 150px;
+    height: 150px;
+    background-color: #061b33;
+    position: relative;
+    cursor: pointer;
+}
+.sword_one {
+    width: 30px;
+    height: 5px;
+
+   margin-bottom: 20px;
+   margin-right: 10px;
+    background-color:#FFFFFF;
+    border:#FFFFFF;
+    
+}
+.sword_two {
+    width: 50px;
+    height: 5px;
+    
+    background-color:#FFFFFF;
+    border:#FFFFFF;
+}
+.thh {
+    margin-right:0px;
+    
+
+}
+.tdd {
+    margin-right: 10px;
+}
+.sword_row {
+    display: flex;
+}
+
+.container:hover .first{
+   opacity: 0;
+   transition: 1s;
+   
+}
+.second {	
+    transition: transform 2s;
+}
+.third{
+   transition: transform 2s;
+}
+.container:hover .second{
+    width: 50px;
+    height: 5px;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: 60px;
+	right: 10px;
+	box-shadow: 0px 0px 21px 15px rgb(255, 0, 0);
+	background-color: rgb(255, 0, 0);
+	border-left: 70px solid rgb(255, 0, 0);
+}
+
+
+.container:hover .third{
+    width: 50px;
+    height: 5px;
+	transform: rotate(-45deg);
+	position: absolute;
+	bottom: 60px;
+	left: 0px;
+	box-shadow: 0px 0px 20px 15px rgba(0, 255, 0, 0.452);
+	background-color: rgb(0, 255, 0);
+	border-right: 70px solid rgba(0, 235, 0, 0.3); 
+}
+
+.content{
+	margin-top: 300px;
+ 	display: flex;
+ 	justify-content: center;
+}
+.content div{
+	width: 50px;
+	height: 50px;
+	 background: linear-gradient(to bottom, rgba(203,96,179,1) 0%,rgba(203,95,179,1) 1%,rgba(193,70,161,0.79) 37%,rgba(168,0,119,0.68) 56%,rgba(192,26,140,0.56) 77%,rgba(219,54,164,0.56) 100%);;
+	border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 20px 15px rgba(55, 149, 172, 0.452);
+}
+.left, .right{
+	transform-origin: 20px -90px;
+}
+
+.left{
+	/*краткая запись - animation: ball-1 1.5s ease-out infinite;*/
+    animation-name:ball-1;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out; /*медленное окончание*/
+    animation-iteration-count: infinite; /*бесконечно проигрывать*/  
+}
+
+.right{
+    
+    /*краткая запись - animation: ball-2 1.5s ease-out infinite;*/
+    animation-name:ball-2;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out; /*медленное окончание*/
+    animation-iteration-count: infinite; /*бесконечно проигрывать*/
+}
+
+
+@keyframes ball-1{
+  0%   { transform: rotate(0deg); }
+  25%   { transform: rotate(70deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes ball-2{
+  0%   { transform: rotate(0deg); }
+  50%   { transform: rotate(0deg); }
+  75%   { transform: rotate(-70deg); }
+  100% { transform: rotate(0deg); }
+}
